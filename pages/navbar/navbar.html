@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ocean's Aquarium</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <video aria-label="Ocean's Aquarium Logo" autoplay loop muted playsinline preload="auto" width="100" height="auto">
+          <source src="/assets/Images/oceans_logo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <ul class="navbar">
+        <li><a href="#">Home Page</a></li>
+        <li><a href="#">Fish Store</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li class="dropdown">
+          <select class="dropdown-select" name="options" size="1">
+            <option value="options" selected="selected">More Options</option>
+            <option value="contact" href="/pages/contact.html">Contact Us</option>
+            <option value="review" href="/pages/reviews.html">Customer Review</option>
+            <option value="login" href="/pages/account.html">Account Login</option>
+          </select>
+        </li>
+      </ul>
+      <div class="nav-btn">
+        <a href="#" class="btn">Shop</a>
+      </div>
+    </nav>
+    <script src="/assets/script.js"></script>
+  </body>
+</html>

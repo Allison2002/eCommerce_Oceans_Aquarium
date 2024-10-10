@@ -1,0 +1,655 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  padding-top: 6em;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+
+/* Navbar Styling */
+#navbar {
+  width: 100%;
+  position: fixed; /* Keeps the navbar at the top of the screen */
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensure the navbar is above other elements */
+  background-color: white;
+  border-bottom: 0.0625em solid #8BE4ED; /* Same border style as the footer */
+  max-height: 12vh;
+}
+
+#footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 10; /* Ensure the footer is above other elements */
+  background-color: white;
+  border-top: 0.0625em solid #8BE4ED; /* Same border style as the navbar */
+  max-height: 40vh;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100vw;
+  padding: .5em 1.25em;
+}
+
+.logo {
+  padding-left: 3em;
+}
+.navbar {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Links: Deep Electric Blue text */
+.navbar li a {
+  padding: .625em 1.25em;
+  background-color: transparent;
+  text-decoration: none;
+  color: #1A1D9E; /* Deep Electric Blue */
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover and Focus Effect for Navbar Items */
+.navbar li a:hover,
+.navbar li a:focus {
+  color: #0BD6E2; /* Neon Cyan on hover */
+  background-color: rgba(11, 214, 226, 0.1); /* Subtle hover effect */
+  outline: .0625 solid #0BD6E2; /* Focus state for accessibility */
+}
+
+/* Dropdown select styling */
+.dropdown-select {
+  appearance: none;
+  background-color: transparent;
+  color: #1A1D9E; /* Deep Electric Blue */
+  padding: .7em;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gray"><polygon points="0,0 20,0 10,10"/></svg>'); /* Adds arrow icon */
+  background-repeat: no-repeat;
+  background-position: right .625em center;
+  background-size: .625em;
+}
+
+/* Dropdown Hover Effect */
+.dropdown-select:hover,
+.dropdown-select:focus {
+  color: #0BD6E2; /* Neon Cyan on hover */
+  background-color: rgba(11, 214, 226, 0.1);
+  outline: 0.125em solid #0BD6E2; /* Focus state */
+}
+
+.nav-btn {
+  padding-right: 3em;
+}
+
+/* Footer Styling */
+
+footer {
+  width: 100%;
+  border-top: 0.0625em solid #8BE4ED; /* Lighter Cyan for a subtle border */
+  padding-top: 2em;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  max-width: 100vw;
+  padding: .625em 1.25em;
+  background-color: white;   
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+  padding-bottom: 8em;
+  border-bottom: 0.0625em solid #8BE4ED;
+  justify-content: left;
+}
+
+.footer-col-text {
+  padding: 0;
+  text-align: left;
+}
+
+.join-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.join h4 {
+   padding: 0.5em 0;
+  background-color: transparent;
+  text-decoration: none;
+  color: #1A1D9E; /* Deep Electric Blue */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-text h5 {
+  padding-top: 1em;
+}
+
+.input-text,
+.input-texth5 {
+  padding-top: .5em;
+}
+
+.input-text input {
+  padding: .5em;
+}
+
+.join h4 {
+  padding: 1em 0;
+  line-height: 1.4;
+}
+
+.join input {
+  font-size: 0.875rem;
+  padding: .5em;
+}
+
+/* Links in Footer */
+.join h5,
+.join h4,
+.footer-col h4,
+.footer-col h3,
+.bottom-nav ul li a,
+.footer-col ul li a {
+  display: inline-block; /* Restricts hover effect to the length of the link */
+  padding: 0.5em 0;
+  background-color: transparent;
+  text-decoration: none;
+  color: #1A1D9E; /* Deep Electric Blue */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover and Focus Effect for Footer Links */
+.bottom-nav ul li a:hover,
+.bottom-nav ul li a:focus,
+.footer-col ul li a:hover,
+.footer-col ul li a:focus {
+  color: #0BD6E2; /* Neon Cyan on hover */
+  background-color: rgba(11, 214, 226, 0.1); /* Subtle hover effect */
+  outline: 0.125em solid #0BD6E2; /* Focus state for accessibility */
+  padding: 0 .5em
+}
+
+/* Social Media Icon Styling */
+.social-media img {
+  width: 3.125em;
+  padding: 0 0.5em;
+  object-fit: cover;
+}
+
+/* Button Styling */
+.btn {
+  font-size: 1.125rem; /* Slightly larger for prominence */
+  padding: .5em 1em;
+  border-radius: 0.3125em;
+  background-color: #1A1D9E; /* Deep Electric Blue */
+  color: white;
+  border: .10em solid #0BD6E2;
+  transition: background-color 0.3s ease;
+}
+
+.btn2 {
+  font-size: 1.125rem; /* Slightly larger for prominence */
+  padding: .5em 1em;
+  border-radius: 0.3125em;
+  border: .10em solid #0BD6E2; /* Deep Electric Blue */
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+
+.btn2:hover,
+.btn2:focus,
+.btn:hover,
+.btn:focus {
+  background-color: #0BD6E2; /* Neon Cyan for hover and focus */
+}
+
+.link a:hover,
+.link a:focus {
+ color: #0BD6E2;
+}
+
+/* Responsive Footer Layout */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* Stacks columns vertically on small screens */
+    padding-bottom: 2em;
+  }
+
+  .footer-col {
+    margin-bottom: 2em; /* Adds spacing between columns */
+  }
+}
+
+.bottom-footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+.social-media {
+  max-width: 100%;
+}
+
+.bottom-nav {
+  display: flex;
+}
+
+.bottom-nav ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 3em;
+}
+
+.footer-col ul li,
+.bottom-nav ul li {
+  list-style: none;
+}
+
+.bottom-nav ul li a,
+.bottom-nav h4 {
+  padding: 0 0.5em;
+}
+
+/* -----------------main content, home page -----------------*/
+
+
+main {
+  background-color: #F2F7FA; /* Your background color */
+  width: 70%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the main */
+  box-shadow: 8px 0 15px rgba(0, 0, 0, 0.2), -8px 0 15px rgba(0, 0, 0, 0.2); /* Horizontal shadow only */
+}
+
+/* Optional Hover Shadow Effect */
+main:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Enhance the shadow on hover */
+}
+
+h1,
+h2 {
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 700;
+}
+
+h3, h4, p, a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.5rem; /* Increase font size for more prominence */
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6em
+}
+
+a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #2A3CAC;
+}
+
+.hero-sct {
+  padding: 3em 0 6em 0;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns, one for text and one for the image */
+  gap: 2em; /* Adds space between the text and image */
+  text-align: left;
+  align-items: center; /* Ensure the elements are vertically centered */
+}
+
+.hero-headline {
+  padding: 1em 0 6em 2em; 
+  text-align: left;
+}
+
+.hero-subheading {
+  padding-top: 4em;
+  text-align: left;
+  padding-right: 2em;
+}
+
+.hero-btn {
+  padding: 2.5em 0 5em 0;
+  text-align: left;
+}
+
+.hero-img {
+  width: 100%; /* Ensure the image spans the entire available width */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.hero-img img {
+  width: 100%; /* Image takes full width of its container */
+  height: 700px; /* Limit the height to ensure it doesn't dominate the screen */
+  object-fit: cover; /* Ensures the image scales properly without distortion */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.grid-btn {
+  padding-top: 2em;
+  text-align: left;
+}
+.grid-box-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 6em 2em;
+}
+
+.second-sct-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  padding-right: 2em;
+}
+
+.second-sct-text h2, .second-sct-text h3 {
+  line-height: 1.5em; /* Improve readability */
+  padding-bottom: 1.5em;
+}
+
+.reversed {
+  padding-left: 1.5em;
+  align-items: left;
+}
+
+.box2-img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.box2-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: .75em;
+  object-fit: cover;
+}
+
+.grid-box-3 {
+  padding: 6em 2em;
+}
+
+.section3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.section3 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3em;
+}
+
+.box3-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.75em;
+}
+
+.box3-title{
+  padding: 1.5em 0;
+  text-align: center;
+}
+
+.box3-text {
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.box3-link {
+  padding-top: .5em;
+  text-align: center;
+}
+
+span {
+  padding-left: 1em;
+}
+
+.box3-link a {
+  padding-bottom: 10em;
+}
+
+.section-text p {
+  padding-bottom: 1em;
+}
+
+.btn-container {
+  display: flex;
+  gap: 2em;
+}
+
+.link {
+  font-size: 1.125rem; /* Slightly larger for prominence */
+  transition: background-color 0.3s ease;
+}
+
+.link a {
+  color: #1A1D9E; /* Deep Electric Blue */
+  text-decoration: none;
+}
+
+.sct-btn {
+  display: flex;
+  padding: 0;
+  text-align: left;
+}
+
+.sign-up {
+    padding: .5em 1em;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  padding: 6em 2em;
+}
+
+.stat-grid2 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-grid3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5em;
+}
+
+/* Review Container */
+.review-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 28rem; /* Adjust width as necessary */
+  padding: .625em;
+}
+
+/* Left Section */
+.review-left {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+}
+
+.profile-img {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  margin-right: .625em;
+}
+
+.review-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.name {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  color: gray;
+}
+
+/* Divider between the sections */
+.divider {
+  width: .1em;
+  height: 5em;
+  background-color: #000;
+  margin: 0 0.625em;
+}
+
+/* Right Section */
+.review-right {
+  display: flex;
+  align-items: center;
+}
+
+.review-right img {
+  width: 12rem; /* Adjust the size based on the actual logo */
+}
+
+.review-sct {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 6em 0;
+  text-align: center;
+}
+
+.stars {
+  font-size: 2rem;
+}
+
+.review-container {
+  margin: 0 auto;
+}
+
+.review {
+  padding: 0 6em 1em 6em;
+}
+
+.review em {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  max-width: 100%;
+  text-align: center;
+}
+
+.contact-grid h4, .contact-grid p, .contact-grid a {
+  text-align: left;
+}
+
+
+.contact-grid2 {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.contact-us {
+  padding: 6em 2em;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-box {
+  background-color: #2A3CAC;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+@media (max-width: 768px) {
+  main,
+  header {
+    max-width: 100%;
+  }
+}
+
+.contact {
+  padding: 1em 0;
+}
+
+.contact-icon {
+  max-width: 3em;
+}
+
+.contact-icon img {
+  width: 100%;
+}
+
+.find-us {
+  text-align: left;
+}
